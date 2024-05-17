@@ -41,25 +41,8 @@ cont: add bx, cols
       ret   
 
 start endp
+
 ;print value in ax register
-;printAx proc
-;    push ax bx cx dx
-;    xor cx, cx
-;pushLoop: idiv ten
-;          push ax
-;          inc cx
-;          cmp al, 0
-;          je prntLoop
-;          xor ah, ah
-;          jmp pushLoop
-;prntLoop: pop dx
-;          mov ah, 2
-;          mov dl, dh
-;          xor dh, dh
-;          add dl, '0'
-;          int 21h
-; endp
-; print array
 printAx proc
           push bx cx ax dx
           mov  bx, 10
